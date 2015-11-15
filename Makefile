@@ -6,6 +6,7 @@ run:
 
 install:
 	pip install -r requirements.txt
+	bower install
 
 test:
 	python manage.py test
