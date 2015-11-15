@@ -59,7 +59,7 @@ target/
 # Sqlite
 *.sqlite3
 
-# Foreman 
+# Foreman
 .env
 
 # Sass
