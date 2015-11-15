@@ -6,6 +6,8 @@ ifeq (manage,$(firstword $(MAKECMDGOALS)))
   $(eval $(RUN_ARGS):;@:)
 endif
 
+APP_LIST ?= crispy_wookie.finance.accounts
+
 install:
 	pip install -r requirements.txt
 	bower install
@@ -20,4 +22,5 @@ run:
 	foreman start
 
 test:
-	coverage run manage.py test -v 2
+	coverage run --source=. manage.py test -v 2 $(APP_LIST)
+	coverage report
