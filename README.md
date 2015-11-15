@@ -7,7 +7,7 @@ This project is built for my own personal use so it may not fit everyone's workf
 I know there are a lot of apps out there for this, but I want everything in one single place instead of using 30 different apps. I will also use this project to learn Docker, React, Swift and Unit Testing.
 
 ### Installation
-To install the Python and Bower dependencies just run:
+To install the Python and [Bower](http://bower.io/) dependencies just run:
 
     make install
 
