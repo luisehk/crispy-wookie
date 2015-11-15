@@ -12,6 +12,8 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'crispy_wookie.finance.accounts',
+    'crispy_wookie.finance.budget',
 )
 
 MIDDLEWARE_CLASSES = (
