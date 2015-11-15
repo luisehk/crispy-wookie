@@ -9,4 +9,4 @@ run:
 	foreman start
 
 test:
-	python manage.py test
+	coverage run manage.py test -v 2
