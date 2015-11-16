@@ -16,9 +16,11 @@ manage:
 migrate:
 	python manage.py migrate
 
+report:
+	coverage report
+
 run:
 	foreman start
 
 test:
 	coverage run --source=. manage.py test -v 2
-	coverage report
