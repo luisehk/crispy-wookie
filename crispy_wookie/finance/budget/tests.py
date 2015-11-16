@@ -2,7 +2,7 @@ from django.test import TestCase
 from .models import Category
 
 
-class AccountTest(TestCase):
+class CategoryTest(TestCase):
     def create_category(self, name):
         return Category.objects.create(name=name)
 
