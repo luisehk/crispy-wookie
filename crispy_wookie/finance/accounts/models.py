@@ -1,5 +1,7 @@
-from django.db import models
 from django.contrib.auth.models import User
+from ..budget.models import Category
+from django.utils import timezone
+from django.db import models
 
 
 def money_field():
@@ -45,3 +47,23 @@ class CreditCard(CreditAccount):
     statement_balance = money_field()
     minimum_payment = money_field()
     closing_date = models.DateField()
+
+
+class Transaction(models.Model):
+    origin = models.ForeignKey(
+        Account,
+        related_name='origin',
+        null=True)
+    destination = models.ForeignKey(
+        Account,
+        related_name='destination',
+        null=True)
+    description = models.CharField(
+        max_length=128,
+        blank=True)
+    category = models.ForeignKey(
+        Category,
+        null=True)
+    amount = money_field()
+    date = models.DateField(
+        default=timezone.now)

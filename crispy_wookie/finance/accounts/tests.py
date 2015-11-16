@@ -2,7 +2,7 @@ from django.test import TestCase
 from .models import Account
 
 
-class AccountTest(TestCase):
+class CategoryTest(TestCase):
     def create_account(self, name, balance):
         return Account.objects.create(
             name=name,
