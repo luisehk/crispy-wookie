@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 def money_field():
@@ -9,6 +10,9 @@ def money_field():
 
 
 class Account(models.Model):
+    user = models.ForeignKey(
+        User,
+        null=True)
     name = models.CharField(
         max_length=128,
         blank=False)
